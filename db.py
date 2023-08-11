@@ -1,5 +1,4 @@
 from mysql import connector
-from mysql.connector.plugins import caching_sha2_password
 
 dataBase = connector.connect(
     host = 'localhost',
