@@ -12,4 +12,4 @@ cursorObject = dataBase.cursor()
 # create a database
 cursorObject.execute('create database if not exists repodb')
 
-print('All done!')
+print('All done!!')
