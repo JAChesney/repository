@@ -29,10 +29,19 @@
               </div>
               <nav class="dropdown-column-wrapper small no-static w-dropdown-list">
                 <div class="dropdown-pd small extra">
-                  <div class="w-layout-grid grid-1-column dropdown-link-column single"><button
+                  <div class="w-layout-grid grid-1-column dropdown-link-column single">
+                    {% if request.user.is_authenticated %} 
+                    <a style="text-decoration: none;" href="/logout"
                       id="w-node-_605b4ac3-f9a6-4bb8-3302-9607726014ca-fdd124ca" class="log-link"
-                      data-wf-user-logout="Log out" data-wf-user-login="Log in" type="button">Log out</button><a
-                      href="/user-account" class="dropdown-link w-dropdown-link">Account</a></div>
+                       type="button">Log Out</a>
+                    {% else %}
+                    <a style="text-decoration: none;" href="/login"
+                      id="w-node-_605b4ac3-f9a6-4bb8-3302-9607726014ca-fdd124ca" class="log-link"
+                       type="button">Log In</a>
+                      <a
+                      href="/signup" class="dropdown-link w-dropdown-link">Sign Up</a>
+                    {% endif %}
+                    </div>
                 </div>
               </nav>
             </div>
@@ -74,7 +83,7 @@
                             class="dropdown-link w-dropdown-link">Blog Post (Premium)</a><a href="/subscribe"
                             class="dropdown-link w-dropdown-link">Subscribe</a><a href="/contact"
                             class="dropdown-link w-dropdown-link">Contact</a><a href="/log-in"
-                            class="dropdown-link w-dropdown-link">Sign In</a><a href="/sign-up"
+                            class="dropdown-link w-dropdown-link">Sign In</a><a href="/login"
                             class="dropdown-link w-dropdown-link">Sign up</a><a href="/update-password"
                             class="dropdown-link w-dropdown-link">Update password</a><a href="/reset-password"
                             class="dropdown-link w-dropdown-link">Reset password</a><a href="/access-denied"
