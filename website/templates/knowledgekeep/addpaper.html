@@ -1,0 +1,133 @@
+{% extends 'base.html' %} 
+{% block content %} 
+{% include 'includes/navbar.html' %}
+
+<div class="section top">
+  <div class="container-default w-container">
+    <div class="w-layout-grid grid-2-columns contact">
+      <div data-w-id="3cb99baa-e47a-d779-7c14-05151a16677d">
+        <h1>Upload paper</h1>
+        <p class="mg-bottom-32px">
+          Lorem ipsum dolor sit amet consectetur adipiscing elit nulla
+          adipiscing tincidunt interdum tellus du.
+        </p>
+        <div class="mg-bottom-16px">
+          <div class="text-200 bold color-neutral-800">Contact us via:</div>
+        </div>
+        <div>
+          <div class="inner-container _400px">
+            <div class="w-layout-grid grid-1-column contact">
+              <a
+                href="mailto:contact@writelogy.com"
+                class="card-link-icon w-inline-block"
+              >
+                <div class="line-rounded-icon contact-icon"></div>
+                <div class="text-200">contact@writelogy.com</div> </a
+              ><a
+                href="mailto:press@writelogy.com"
+                class="card-link-icon w-inline-block"
+              >
+                <div class="line-rounded-icon contact-icon"></div>
+                <div class="text-200">press@writelogy.com</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-w-id="3cb99baa-e47a-d779-7c14-05151a1667a5">
+        <div class="card form w-form">
+          <form
+            id="wf-form-Subject"
+            name="wf-form-Subject"
+            method="post"
+            action='/addpaper/'
+            enctype='multipart/form-data'
+            
+            data-wf-page-id="62ae115e82ada269e69a0b12"
+            data-wf-element-id="3cb99baa-e47a-d779-7c14-05151a1667a7"
+          >
+          {% csrf_token %}
+            <div class="w-layout-grid grid-2-columns form">
+              <div>
+                <label for="Name">Paper title</label
+                ><input
+                  type="text"
+                  class="input w-input"
+                  maxlength="256"
+                  name="paper-title"
+                  data-name="Name"
+                  placeholder="ex. Understanding TDA"
+                  id="Name"
+                  required
+                />
+              </div>
+              <div>
+                <label for="Email-2">Paper type</label>
+                <select
+                required
+                name='paper-type'
+                class="input w-input">
+                    <option value="journal">Journal</option>
+                    <option value="article">Article</option>
+                </select>
+              </div>
+              <div>
+                <label for="Phone">Published?</label
+                >
+                <select
+                name='is-published'
+                required
+                class="input w-input">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+              </div>
+              <div>
+                <label for="Subject">Upload paper</label
+                ><input
+                 accept="application/pdf"
+                  type="file"
+                  class="input w-input"
+                  name="file"
+                  data-name="Subject"
+                  placeholder="ex. Subscriptions"
+                  id="Subject"
+                  required
+                />
+              </div>
+              <div id="w-node-_3cb99baa-e47a-d779-7c14-05151a1667b9-e69a0b12">
+                <label for="Message">Paper description</label
+                ><textarea
+                  id="Message"
+                  name="paper-description"
+                  maxlength="5000"
+                  data-name="Message"
+                  placeholder="Description here..."
+                  class="text-area w-input"
+                  required
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Upload paper"
+                id="w-node-_3cb99baa-e47a-d779-7c14-05151a1667bd-e69a0b12"
+                class="btn-primary w-button"
+              />
+            </div>
+          </form>
+          <div class="success-message w-form-done">
+            <div>
+              <div class="line-rounded-icon success-message-check large"></div>
+              <h3 class="color-neutral-300">Thank you</h3>
+              <div>Thanks for reaching out. We will get back to you soon</div>
+            </div>
+          </div>
+          <div class="error-message w-form-fail">
+            <div>Oops! Something went wrong while submitting the form.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,277 @@
+{% extends 'base.html' %} {% block content %} {% include 'includes/navbar.html' %}
+<div class="section main-posts">
+  <div class="container-default w-container">
+    <div class="w-layout-grid grid-2-columns sidebar-content">
+      <div id="w-node-_504883fc-b26e-b64f-cfed-179d1ea0a43c-546b1340">
+        <h2
+          id="w-node-_2b509be3-5d10-2f2a-7cd4-6926a79b1361-546b1340"
+          data-w-id="2b509be3-5d10-2f2a-7cd4-6926a79b1361"
+          style="opacity: 0"
+          class="heading-h3-size mg-bottom-32px"
+        >
+          Lastest articles
+        </h2>
+        <div
+          data-w-id="18179618-f4f1-bf64-3fac-c197bb5b10d6"
+          style="opacity: 0"
+          class="w-dyn-list"
+        >
+          <div role="list" class="grid-1-column gap-row-48px w-dyn-items">
+            {% for paper in papers %}
+
+            <div role="listitem" class="w-dyn-item">
+              <a
+                href="/blog/how-to-choose-the-best-management-software-2"
+                class="blog-card-featured-wrapper w-inline-block"
+              >
+                <div
+                  data-w-id="18179618-f4f1-bf64-3fac-c197bb5b10da"
+                  class="w-layout-grid grid-2-columns blog-card-primary"
+                >
+                  <div class="blog-card-image-wrapper featured-v1">
+                    <img
+                      src="https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe99991773809b3eb0313_management-thumbnail-blog-writelogy-x-webflow-template.jpg"
+                      alt="How to choose the best management software"
+                      sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 95vw, 314px"
+                      srcset="
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe99991773809b3eb0313_management-thumbnail-blog-writelogy-x-webflow-template-p-500.jpeg 500w,
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe99991773809b3eb0313_management-thumbnail-blog-writelogy-x-webflow-template.jpg        800w
+                      "
+                      class="blog-card-image featured-v1"
+                    />
+                  </div>
+                  <div class="blog-card-content-default">
+                    <div class="text-uppercase mg-bottom-16px">
+                      <div class="text-200 bold">{{ paper.type}}</div>
+                    </div>
+                    <h3>{{ paper.paper_name }}</h3>
+                    <p class="mg-bottom-24px">
+                      Viverra tristique gravida dolor vel aenean egestas libero
+                      enim consequat arcu augue euismod est.
+                    </p>
+                    <div class="blog-card-details-container">
+                      <div class="author-container">
+                        <div
+                          class="avatar-circle _01 blog-card-bg-author-image"
+                        >
+                          <img
+                            src="https://assets.website-files.com/62abc23e594f83d9d66b136f/62abc23e594f834a736b14c7_john-carter-team-member-brix-templates-avatar-picture.jpg"
+                            loading="eager"
+                            alt="John Carter"
+                            sizes="(max-width: 991px) 32px, (max-width: 1439px) 3vw, (max-width: 1919px) 2vw, 32px"
+                            srcset="
+                              https://assets.website-files.com/62abc23e594f83d9d66b136f/62abc23e594f834a736b14c7_john-carter-team-member-brix-templates-avatar-picture-p-500.jpeg 500w,
+                              https://assets.website-files.com/62abc23e594f83d9d66b136f/62abc23e594f834a736b14c7_john-carter-team-member-brix-templates-avatar-picture.jpg        800w
+                            "
+                          />
+                        </div>
+                        <div class="text-100 bold color-neutral-800">
+                          {{ paper.user.full_name }}
+                        </div>
+                      </div>
+                      <div class="blog-card-bg-date-container">
+                        <div class="line-rounded-icon clock-icon dark"></div>
+                        <div class="text-100 bold color-neutral-800">
+                          June 18, 2022
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div
+        id="w-node-_79784bda-7807-708e-c89b-c286c2c65d0f-c2c65d0f"
+        data-w-id="79784bda-7807-708e-c89b-c286c2c65d0f"
+        class="sidebar"
+      >
+        <a href="#" class="logo-sidebar w-inline-block"
+          ><img
+            src="C:\Users\Jason_Chesney\Downloads\Minimalist_Simple_Brand_Initial_Logo-removebg-preview.svg"
+            alt="Writelogy X Webflow Template - Logo"
+        /></a>
+        <p class="mg-bottom-24px">
+          Tellus id nisl blandit vitae quam magna nisl aliquet aliquam arcu
+          ultricies commodo felisoler massa ipsum erat non sit amet.
+        </p>
+        <form action="/search" class="w-form">
+          <input
+            type="search"
+            class="input search w-input"
+            maxlength="256"
+            name="query"
+            placeholder="Search articles"
+            id="search"
+            required=""
+          /><input
+            type="submit"
+            value="Search"
+            class="hidden-on-desktop w-button"
+          />
+        </form>
+        <div class="divider _56px"></div>
+        <div class="w-dyn-list">
+          <div role="list" class="categories-wrapper-sidebar w-dyn-items">
+            <div role="listitem" class="category-item-wrapper w-dyn-item">
+              <a
+                href="/blog-post-categories/tips"
+                class="badge-primary small light category"
+                >Tips</a
+              >
+            </div>
+            <div role="listitem" class="category-item-wrapper w-dyn-item">
+              <a
+                href="/blog-post-categories/resources"
+                class="badge-primary small light category"
+                >Resources</a
+              >
+            </div>
+            <div role="listitem" class="category-item-wrapper w-dyn-item">
+              <a
+                href="/blog-post-categories/guides"
+                class="badge-primary small light category"
+                >Guides</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="mg-bottom-64px w-dyn-list">
+          <div role="list" class="w-dyn-items">
+            <div role="listitem" class="w-dyn-item">
+              <a
+                data-w-id="79784bda-7807-708e-c89b-c286c2c65d22"
+                href="/blog/how-to-choose-the-best-management-software"
+                class="blog-card-bg sidebar w-inline-block"
+              >
+                <div class="blog-card-bg-container small">
+                  <div class="text-uppercase mg-bottom-16px">
+                    <div class="text-200 bold color-neutral-100">Resources</div>
+                  </div>
+                  <h3 class="heading-h4-size color-neutral-100 mg-bottom-0">
+                    How to choose the best management software
+                  </h3>
+                </div>
+                <div class="bg-overlay-gradient blog-card-bg-overlay"></div>
+                <img
+                  src="https://assets.website-files.com/62abc23e594f83d9d66b136f/62abfe89ab6b229bab1ed420_management-software-featured-blog-writelogy-x-webflow-template.jpg"
+                  alt="How to choose the best management software"
+                  sizes="(max-width: 479px) 100vw, (max-width: 767px) 94vw, (max-width: 991px) 95vw, (max-width: 1439px) 27vw, 324.9375px"
+                  srcset="
+                    https://assets.website-files.com/62abc23e594f83d9d66b136f/62abfe89ab6b229bab1ed420_management-software-featured-blog-writelogy-x-webflow-template-p-500.jpeg 500w,
+                    https://assets.website-files.com/62abc23e594f83d9d66b136f/62abfe89ab6b229bab1ed420_management-software-featured-blog-writelogy-x-webflow-template.jpg        760w
+                  "
+                  class="blog-card-bg-image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <h2
+          data-w-id="79784bda-7807-708e-c89b-c286c2c65d2c"
+          class="heading-h3-size mg-bottom-32px"
+        >
+          Popular articles
+        </h2>
+        <div
+          data-w-id="79784bda-7807-708e-c89b-c286c2c65d2e"
+          class="w-dyn-list"
+        >
+          <div role="list" class="grid-1-column gap-row-22px w-dyn-items">
+            <div role="listitem" class="w-dyn-item">
+              <a
+                href="/blog/10-best-collaboration-software-for-your-team"
+                class="blog-card-featured-wrapper w-inline-block"
+              >
+                <div
+                  data-w-id="79784bda-7807-708e-c89b-c286c2c65d32"
+                  class="w-layout-grid grid-2-columns blog-card-primary sidebar"
+                >
+                  <div class="blog-card-image-wrapper sidebar">
+                    <img
+                      src="https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe3a09177383d10eae70a_collaboration-software-thumbnail-blog-writelogy-x-webflow-template-.jpg"
+                      alt="10 Best collaboration software for your team"
+                      sizes="132px"
+                      srcset="
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe3a09177383d10eae70a_collaboration-software-thumbnail-blog-writelogy-x-webflow-template--p-500.jpeg 500w,
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe3a09177383d10eae70a_collaboration-software-thumbnail-blog-writelogy-x-webflow-template-.jpg        760w
+                      "
+                      class="blog-card-image"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="heading-h5-size mg-bottom-0">
+                      10 Best collaboration software for your team
+                    </h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div role="listitem" class="w-dyn-item">
+              <a
+                href="/blog/a-complete-guide-to-learn-project-management"
+                class="blog-card-featured-wrapper w-inline-block"
+              >
+                <div
+                  data-w-id="79784bda-7807-708e-c89b-c286c2c65d32"
+                  class="w-layout-grid grid-2-columns blog-card-primary sidebar"
+                >
+                  <div class="blog-card-image-wrapper sidebar">
+                    <img
+                      src="https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe33779b3d5971674d153_project-management-thumbnail-blog-writelogy-x-webflow-template-.jpg"
+                      alt="A complete guide to learn project management"
+                      sizes="132px"
+                      srcset="
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe33779b3d5971674d153_project-management-thumbnail-blog-writelogy-x-webflow-template--p-500.jpeg 500w,
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe33779b3d5971674d153_project-management-thumbnail-blog-writelogy-x-webflow-template-.jpg        760w
+                      "
+                      class="blog-card-image"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="heading-h5-size mg-bottom-0">
+                      A complete guide to learn project management
+                    </h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div role="listitem" class="w-dyn-item">
+              <a
+                href="/blog/how-time-tracking-can-improve-team-management"
+                class="blog-card-featured-wrapper w-inline-block"
+              >
+                <div
+                  data-w-id="79784bda-7807-708e-c89b-c286c2c65d32"
+                  class="w-layout-grid grid-2-columns blog-card-primary sidebar"
+                >
+                  <div class="blog-card-image-wrapper sidebar">
+                    <img
+                      src="https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe1c991773849cceae17c_time-tracking-thumbnail-blog-writelogy-x-webflow-template-.jpg"
+                      alt="How time tracking can improve team management"
+                      sizes="132px"
+                      srcset="
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe1c991773849cceae17c_time-tracking-thumbnail-blog-writelogy-x-webflow-template--p-500.jpeg 500w,
+                        https://assets.website-files.com/62abc23e594f83d9d66b136f/62abe1c991773849cceae17c_time-tracking-thumbnail-blog-writelogy-x-webflow-template-.jpg        760w
+                      "
+                      class="blog-card-image"
+                    />
+                  </div>
+                  <div>
+                    <h4 class="heading-h5-size mg-bottom-0">
+                      How time tracking can improve team management
+                    </h4>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
